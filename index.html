@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <title>JS - Jessica Santos</title>
+</head>
+<body onload = "loading()">
+<!-- NAVEGATION BAR -->
+    <nav id="nav-bar">
+        <ul>
+            <li class="dropdown">
+                <a href="#">All projects</a>
+                <div class="dropdown-child">                
+                    <a href="#age">Age Chech</a>
+                    <a href="#hours">Hours Check</a>
+                    <a href="#count">Let's Count</a>
+                    <a href="#mult">Multiplication table</a>
+                    <a href="#analise">Analising Numbers</a>
+                    <a href="#dice">Dice Game</a>
+                </div>
+            </li>
+            <li class="logo">JS</li>
+            <li class="dropdown">
+                <a href="#">Contact</a>
+                <div class="dropdown-child">
+                    <form action="https://formsubmit.co/jessica.santosb@outlook.com" method="POST"">
+                        <label for="label" id="dp-text">Your name:</label><br> 
+                        <input type="text" name="name" id="dp-i"><br>  
+                        <label for="label" id="dp-text">Your email:</label><br>
+                        <input type="email" name="email" id="dp-i"><br>
+                        <label for="label" id="dp-text">Your message:</label><br>
+                        <textarea name="message" id="message" cols="25" rows="5" placeholder="Type here."></textarea><br>
+                        <input class="button" type="submit" value="Send"><br>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+<!-- MAIN SECTION -->
+    <article id="main-section">
+<!-- AGE CHECK -->
+        <h1 id="age">Age check</h1>
+        <section id="age-check">            
+            <form action="form">
+                <label>Year you was born:</label>
+                <input class="year" type="number" name="numb" id="number">
+            </form>
+            <form class="age-form" action="form">
+                <label class="gender">Gender:</label>
+                <input type="radio" name="radsex" id="mal" checked>
+                <label>Male</label>
+                <input type="radio" name="radsex" id="fem">
+                <label>Female</label><br>              
+                <input class="button" type="button" value="check" onclick="check()">
+            </form>
+            <div id="res">
+                <p>Type the date upside to see the result.</p>
+            </div>
+        </section><!-- ENDING AGE CHECK SECTION -->
+        <hr>
+
+<!-- HOURS CHECK -->
+        <h1 id="hours">Hours check</h1>
+        <section id="hours-check">
+            <div id="msg"><p>Hours</p></div>
+            <div><img id="image" src="" alt="images"></div>
+        </section> <!-- ENDING HOURS CHECK SECTION -->
+        <hr>
+
+<!-- LET'S COUNT -->
+        <h1 id="count">Let's count</h1>
+        <section id="counting">
+            <form class="data">
+                <label>Start: <input type="number" name="counting" id="n-start"></label><br>
+                <label>End: <input type="number" name="counting" id="n-end"></label><br>
+                <label>Counting by: <input type="number" name="counting" id="n-count"></label><br>
+                <input class="button" type="button" value="go" onclick="count()">
+            </form>
+            <div id="count-res"><p>Your result will appear here.</p></div>
+        </section> <!-- ENDING LET'S COUNT SECTION -->
+        <hr>
+
+<!-- MULTIPLICATION TABLE -->
+        <h1 id="mult">Multiplication Table</h1>
+        <section id="mult-table">
+            <form class="table-data">
+                <label>Number:</label>   
+                <input type="number" name="mult-table" id="table-n">
+                <input type="button" value="Generate" class="button" onclick="go()">             
+            </form>
+            <div>
+                <select name="table-select" id="select" size="10">
+                    <option>Your table will</option>
+                    <option>appear here.</option>
+                </select>
+            </div>
+        </section> <!-- ENDING MULTIPLICATION TABLE SECTION -->
+        <hr>
+
+<!-- ANALISING NUMBERS -->
+        <h1 id="analise">Analising Numbers</h1>
+        <section id="n-analise">
+            <form>
+                <label>Type a number<br> between 1 and 20</label><br>
+                <input type="number" name="a-num" id="a-num">
+                <input class="button" type="button" value="add" onclick="add()"><br>
+            </form>
+            <div class="option-div">
+                <select name="list-tab" id="list-tab" size="10"></select><br>
+                <input id="end-btn" class="button" type="button" value="End" onclick="end()">
+            </div>
+            <div id="a-n-res"></div>
+        </section> <!-- ENDING ANALISING NUMBERS SECTION -->
+        <hr>
+
+<!-- DICE GAME -->
+        <h1 id="dice">Dice Game</h1>
+        <section id="dice-game">
+            <h2 class="dice-text">Refresh the page</h2>
+            <div>
+                <p class="dice-text">Player 1</p>
+                <img class="img1" src="images/dice6.png" alt="dice">
+                <p>Player 2</p>
+                <img class="img2" src="images/dice6.png" alt="dice">
+            </div>
+        </section> <!-- ENDING DICE GAME SECTION -->
+
+
+    </article> <!-- ENDING MAIN SECTION -->
+<!-- FOOTER -->
+    <footer><p>&copy; Developed by Jessica Santos</p></footer>
+<!-- JS SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
