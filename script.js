@@ -15,6 +15,8 @@ function check() {
         let gender = ''
         img.setAttribute('id', 'photo')
         img.style.paddingTop = '15px'
+        img.style.maxHeight = '400px'
+        img.style.minHeight = '350px'
         if (fsex[0].checked) {
             gender = 'Man'
             if (age >=0 && age < 5) {
@@ -58,9 +60,12 @@ function loading() {
     let m = d.getMinutes()
     msg.innerHTML = 'Now is ' + h + ' hours<br> and ' + m + ' minutes'
     img.style.textAlign = 'center'
+    img.style.maxHeight = '350px'
+    img.style.minHeight = '300px'
     msg.style.color = 'salmon'
     msg.style.fontWeight = 'bold'
     msg.style.fontSize = '1.5rem'
+    msg.style.lineHeight = '2rem'
 
     if (h >= 6 && h < 12) {
         img.src = 'images/morning.png'      
@@ -117,7 +122,7 @@ function go() {
         for(let a=1;a<=10;a++){
             let item = document.createElement('option')
             item.text = (a) + 'x' + (n) + '=' + (a*n)
-            item.value = 'tab(c)'
+            item.value = 'tab(c)'            
             tab.appendChild(item)
         }
     }
@@ -188,20 +193,21 @@ function end() {
 }
 
 /////////////////// DICE GAME /////////////////
-    let randomNumber1 = Math.floor(Math.random() * 5)+1;
-    let randomNumber2 = Math.floor(Math.random() * 5)+1; 
-    let img1 = document.querySelector('img.img1').setAttribute('src', 'images/dice'+randomNumber1+'.png')
-    let img2 = document.querySelector('img.img2').setAttribute('src', 'images/dice'+randomNumber2+'.png')
+const randomNumber1 = Math.floor(Math.random() * 5)+1;
+const randomNumber2 = Math.floor(Math.random() * 5)+1; 
+const img1 = document.querySelector('img.img1').setAttribute('src', 'images/dice'+randomNumber1+'.png')
+const img2 = document.querySelector('img.img2').setAttribute('src', 'images/dice'+randomNumber2+'.png')
+const btn = document.querySelector('#btn-dice')
+let text = document.querySelector('h2.dice-text')
+text.style.color = 'salmon'
+text.style.fontWeight = 'bold'
 
-    let text = document.querySelector('h2.dice-text')
-    text.style.color = 'salmon'
-    text.style.fontWeight = 'bold'
-    if (randomNumber1 >= randomNumber2) {
-        text.innerHTML = 'Player 1 Wins!'
-    } else if (randomNumber1 <= randomNumber2) {
-        text.innerHTML = 'Player 2 Wins!'
-    } else {
-        text.innerHTML = 'Draw'
-    }
+if (randomNumber1 >= randomNumber2) {
+    text.innerHTML = 'Player 1 Wins!'
+} else if (randomNumber1 <= randomNumber2) {
+    text.innerHTML = 'Player 2 Wins!'
+} else {
+    text.innerHTML = 'Draw'
+}
 
 

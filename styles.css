@@ -40,8 +40,12 @@ a:active, a:hover {
     transition: -5%;
 }
 @media (max-width: 900px) {
-    .logo {
-        padding: 0 30px 0 30px;
+    .logo {        
+               
+    }
+    nav {
+        height: 250px;
+        display: flex;
     }
 }
  
@@ -60,7 +64,7 @@ a:active, a:hover {
     display: inline;
     position: absolute;
     margin-top: 70px;
-    margin-left: -50px;
+    margin-left: -30px;
     background-color: #66b2b2;
     transition: -5%;
     border-radius: 10%;
@@ -83,17 +87,22 @@ a:active, a:hover {
 h1 { 
     color: #fff;
     font-size: 3.5rem;
-    padding: 40px 0 40px 0;
+    padding: 40px 10% 40px 10%;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Playfair Display', serif;
+}
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2.75rem;
+    }
 }
 
 /*********************************** ALL SECTIONS */
 section {
     margin: 0 10% 0 10%;
     background-color: #fff;
-    height: 800px;
+    min-height: 800px;
     border-radius: 20%;
     padding-top: 30px;
     box-shadow: 10px 10px 2px 1px teal;
@@ -121,7 +130,6 @@ input::-webkit-inner-spin-button {
     }
 }
 
-
 /*********************************** ALL BUTTONS */
 .button {
     height: 50px;
@@ -147,7 +155,7 @@ input::-webkit-inner-spin-button {
     margin: 5px 0 5px 0;
 }
 .gender {
-    padding-right: 50px;
+    padding-right: 30px;
 }
 .age-form {
     padding: 10px 0 10px 0;
@@ -157,6 +165,11 @@ input::-webkit-inner-spin-button {
 }
 #mal, #fem {
     accent-color: teal;
+}
+@media (min-width: 900px) {
+    #age-check {
+        padding: 3%;
+    }
 }
 
 /*********************************** HOURS CHECK SECTION */
@@ -186,11 +199,16 @@ input::-webkit-inner-spin-button {
 #count-res {
     margin-top: 20px
 }
+@media (min-width: 900px) {
+    #counting {
+        padding-left: 15%;
+    }
+}
 
 /*********************************** MULTIPLICATION TABLE SECTION */
 #select {
-    height: 400px;
-    width: 500px;
+    min-height: 400px;
+    max-width: 400px;
     margin-top: 120px;
     font-size: 1.6rem;
     text-align: center;
@@ -214,12 +232,15 @@ input::-webkit-inner-spin-button {
     margin: 20px;
 }
 #list-tab {
-    width: 500px;
+    max-width: 400px;
 }
 
 /*********************************** DICE GAME SECTION */
+#dice-game {
+    margin-bottom: 80px;
+}
 #dice-game div{
-    padding-top: 60px
+    padding-top: 60px;
 }
 #dice-game div p {
     font-size: 1.5rem;
@@ -229,8 +250,10 @@ input::-webkit-inner-spin-button {
 footer {
     background-color:#66b2b2;
     color: #fff;
-    height: 70px;
-    margin-top: 50px;
-    padding-top: 40px;    
-    text-align: center;
+    height: 20px;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+
 }
