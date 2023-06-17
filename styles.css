@@ -12,26 +12,30 @@ body::selection {
 nav{
     background-color:#66b2b2;
     color: #fff;
-    height: 100px;
-    text-align: center;
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .logo{
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
     color: salmon;
-    padding: 0 200px 0 200px;
+    text-align: center;
 }
 nav ul li{
     display: inline-block;
-    line-height: 80px;
-    margin: 0.5px;
+    line-height: 70px;
+    margin: 0 300px 10px 300px;
+    background-color: salmon;
+    border-radius: 10px;
 }
 nav ul li a {
     display: inline-block;
     color: #fff;
     font-size: 1.2rem;
     padding: 7px 10px;
-    border-radius: 100px;
+    border-radius: 10px;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -39,13 +43,24 @@ a:active, a:hover {
     background-color: salmon;
     transition: -5%;
 }
+.dp-contact{
+    line-height: 50px;
+}
 @media (max-width: 900px) {
-    .logo {        
-               
+    nav ul li {
+        margin: 5px;
     }
-    nav {
-        height: 250px;
-        display: flex;
+    nav ul li a { 
+        font-size: 1rem;
+        padding: 5px;
+    }
+    #dp-text {
+        font-size: 1rem;
+    }
+    .dropdown:hover .dropdown-child {
+        margin: 0 auto;
+        
+
     }
 }
  
@@ -56,54 +71,62 @@ a:active, a:hover {
 }
 .dropdown-child {
     display: none;
+    padding: 0 15px;
 }
-.dropdown-child a {
-    padding: 0 30px 0 30px;
+.dropdown-child a:visited{
+   color: rgb(95, 91, 91);
 }
 .dropdown:hover .dropdown-child {
     display: inline;
     position: absolute;
-    margin-top: 70px;
-    margin-left: -30px;
+    margin: 70px -30px;
     background-color: #66b2b2;
     transition: -5%;
-    border-radius: 10%;
+    border-radius: 10px;
 }
+
+/* CONTACT BUTTOM */
 #dp-text {
-    font-size: 1.25rem;
     color: #fff;
+    font-size: 1.2rem;
     font-weight: 100;
     text-transform: uppercase;
 }
 #dp-i {
     box-shadow: 2px 2px 1px 1px black;
     font-size: 1rem;
-    width: 280px;
+    width: 200px;
     height: 45px;
     text-align: center;
+}
+textarea {
+    height: 200px;
+    width: 200px;
 }
 
 /*********************************** ALL HEADINGS */
 h1 { 
     color: #fff;
     font-size: 3.5rem;
-    padding: 40px 10% 40px 10%;
+    padding: 40px 10%;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Playfair Display', serif;
 }
 @media (max-width: 900px) {
     h1 {
-        font-size: 2.75rem;
+        font-size: 2rem;
+        padding: 10% 0;
     }
 }
 
 /*********************************** ALL SECTIONS */
 section {
-    margin: 0 10% 0 10%;
+    margin: 0 auto;
     background-color: #fff;
     min-height: 800px;
-    border-radius: 20%;
+    max-width: 800px;
+    border-radius: 10px;
     padding-top: 30px;
     box-shadow: 10px 10px 2px 1px teal;
     text-align: center;    
@@ -121,12 +144,9 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-@media (min-width: 900px) {
-    section {
-        max-width: 900px;
-    }
+@media (max-width: 900px) {
     #main-section {
-        margin: 0 20% 0 20%;
+        margin: 0 5%;
     }
 }
 
@@ -185,8 +205,16 @@ input::-webkit-inner-spin-button {
 }
 
 /*********************************** LET'S COUNT SECTION */
-#counting label {
-    line-height: 2;
+.data {
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#btn-count {
+    margin: 0 auto;
 }
 #counting input {
     box-shadow: 2px 2px 1px 1px black;
@@ -194,22 +222,16 @@ input::-webkit-inner-spin-button {
     width: 120px;
     height: 45px;
     text-align: center;
-    margin: 5px 0 5px 0;
 }
 #count-res {
-    margin-top: 20px
-}
-@media (min-width: 900px) {
-    #counting {
-        padding-left: 15%;
-    }
+    margin-top: 20px;
 }
 
 /*********************************** MULTIPLICATION TABLE SECTION */
 #select {
     min-height: 400px;
     max-width: 400px;
-    margin-top: 120px;
+    margin: 120px 0;
     font-size: 1.6rem;
     text-align: center;
 }
@@ -219,6 +241,7 @@ input::-webkit-inner-spin-button {
     width: 120px;
     height: 45px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 /*********************************** ANALISING NUMBERS SECTION */
@@ -245,6 +268,9 @@ input::-webkit-inner-spin-button {
 #dice-game div p {
     font-size: 1.5rem;
     padding: 10px;
+}
+#dice-game h5 {
+    font-size: 0.75rem;
 }
 /*********************************** FOOTER */
 footer {

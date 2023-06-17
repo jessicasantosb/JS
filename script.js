@@ -15,8 +15,8 @@ function check() {
         let gender = ''
         img.setAttribute('id', 'photo')
         img.style.paddingTop = '15px'
-        img.style.maxHeight = '400px'
-        img.style.minHeight = '350px'
+        img.style.maxHeight = '300px'
+        img.style.minHeight = '200px'
         if (fsex[0].checked) {
             gender = 'Man'
             if (age >=0 && age < 5) {
@@ -60,8 +60,9 @@ function loading() {
     let m = d.getMinutes()
     msg.innerHTML = 'Now is ' + h + ' hours<br> and ' + m + ' minutes'
     img.style.textAlign = 'center'
-    img.style.maxHeight = '350px'
-    img.style.minHeight = '300px'
+    img.style.maxHeight = '300px'
+    img.style.minHeight = '150px'
+    img.style.padding = '20% 0'
     msg.style.color = 'salmon'
     msg.style.fontWeight = 'bold'
     msg.style.fontSize = '1.5rem'

@@ -15,6 +15,7 @@
 <!-- NAVEGATION BAR -->
     <nav id="nav-bar">
         <ul>
+            <h1 class="logo">JS</h1>
             <li class="dropdown">
                 <a href="#">All projects</a>
                 <div class="dropdown-child">                
@@ -26,17 +27,16 @@
                     <a href="#dice">Dice Game</a>
                 </div>
             </li>
-            <li class="logo">JS</li>
             <li class="dropdown">
                 <a href="#">Contact</a>
                 <div class="dropdown-child">
                     <form action="https://formsubmit.co/jessica.santosb@outlook.com" method="POST"">
-                        <label for="label" id="dp-text">Your name:</label><br> 
-                        <input type="text" name="name" id="dp-i"><br>  
-                        <label for="label" id="dp-text">Your email:</label><br>
-                        <input type="email" name="email" id="dp-i"><br>
-                        <label for="label" id="dp-text">Your message:</label><br>
-                        <textarea name="message" id="message" cols="25" rows="5" placeholder="Type here."></textarea><br>
+                        <label class="dp-contact" for="label" id="dp-text">Your name:</label><br> 
+                        <input class="dp-contact" type="text" name="name" id="dp-i" required><br>  
+                        <label class="dp-contact" for="label" id="dp-text">Your email:</label><br>
+                        <input class="dp-contact" type="email" name="email" id="dp-i" required><br>
+                        <label class="dp-contact" for="label" id="dp-text">Your message:</label><br>
+                        <textarea name="message" id="message" cols="25" rows="5" placeholder="Type here." required></textarea><br>
                         <input class="button" type="submit" value="Send"><br>
                     </form>
                 </div>
@@ -54,7 +54,7 @@
                 <input class="year" type="number" name="numb" id="number">
             </form>
             <form class="age-form" action="form">
-                <label class="gender">Gender:</label>
+                <label class="gender">Gender:</label><br>
                 <input type="radio" name="radsex" id="mal" checked>
                 <label>Male</label>
                 <input type="radio" name="radsex" id="fem">
@@ -82,7 +82,7 @@
                 <label>Start: <input type="number" name="counting" id="n-start"></label><br>
                 <label>End: <input type="number" name="counting" id="n-end"></label><br>
                 <label>Counting by: <input type="number" name="counting" id="n-count"></label><br>
-                <input class="button" type="button" value="go" onclick="count()">
+                <input id="btn-count" class="button" type="button" value="go" onclick="count()">
             </form>
             <div id="count-res"><p>Your result will appear here.</p></div>
         </section> <!-- ENDING LET'S COUNT SECTION -->
