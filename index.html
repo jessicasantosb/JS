@@ -18,8 +18,8 @@
             <h1 class="logo">JS</h1>
             <li class="dropdown">
                 <a href="#">All projects</a>
-                <div class="dropdown-child">                
-                    <a href="#age">Age Chech</a>
+                <div id="dp-allProjects" class="dropdown-child">                
+                    <a href="#age">Age chech</a>
                     <a href="#hours">Hours Check</a>
                     <a href="#count">Let's Count</a>
                     <a href="#mult">Multiplication table</a>
@@ -29,7 +29,7 @@
             </li>
             <li class="dropdown">
                 <a href="#">Contact</a>
-                <div class="dropdown-child">
+                <div id="dp-contact" class="dropdown-child">
                     <form action="https://formsubmit.co/jessica.santosb@outlook.com" method="POST"">
                         <label class="dp-contact" for="label" id="dp-text">Your name:</label><br> 
                         <input class="dp-contact" type="text" name="name" id="dp-i" required><br>  
@@ -55,14 +55,14 @@
             </form>
             <form class="age-form" action="form">
                 <label class="gender">Gender:</label><br>
-                <input type="radio" name="radsex" id="mal" checked>
-                <label>Male</label>
+                <input id="btn-ageCheck" type="radio" name="radsex" id="mal" checked>
+                <label>Man</label>
                 <input type="radio" name="radsex" id="fem">
-                <label>Female</label><br>              
-                <input class="button" type="button" value="check" onclick="check()">
+                <label>Woman</label><br>              
+                <input  class="button" type="button" value="see" onclick="check()">
             </form>
             <div id="res">
-                <p>Type the date upside to see the result.</p>
+                <p>Type the date to see the result.</p>
             </div>
         </section><!-- ENDING AGE CHECK SECTION -->
         <hr>
@@ -79,12 +79,12 @@
         <h1 id="count">Let's count</h1>
         <section id="counting">
             <form class="data">
-                <label>Start: <input type="number" name="counting" id="n-start"></label><br>
-                <label>End: <input type="number" name="counting" id="n-end"></label><br>
+                <label>Starting: <input type="number" name="counting" id="n-start"></label><br>
+                <label>Ending: <input type="number" name="counting" id="n-end"></label><br>
                 <label>Counting by: <input type="number" name="counting" id="n-count"></label><br>
                 <input id="btn-count" class="button" type="button" value="go" onclick="count()">
             </form>
-            <div id="count-res"><p>Your result will appear here.</p></div>
+            <div id="count-res"><p></p></div>
         </section> <!-- ENDING LET'S COUNT SECTION -->
         <hr>
 
@@ -98,8 +98,7 @@
             </form>
             <div>
                 <select name="table-select" id="select" size="10">
-                    <option>Your table will</option>
-                    <option>appear here.</option>
+                    <option></option>
                 </select>
             </div>
         </section> <!-- ENDING MULTIPLICATION TABLE SECTION -->
@@ -134,11 +133,14 @@
             </div>
         </section> <!-- ENDING DICE GAME SECTION -->
 
-
+        <div class="gtranslate_wrapper"></div>
     </article> <!-- ENDING MAIN SECTION -->
+
 <!-- FOOTER -->
     <footer><p>&copy; Developed by Jessica Santos</p></footer>
+
 <!-- JS SCRIPT -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 </html>

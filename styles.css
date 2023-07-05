@@ -12,10 +12,11 @@ body::selection {
 nav{
     background-color:#66b2b2;
     color: #fff;
-    min-height: 100px;
+    min-height: 250px;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 5px;
 }
 .logo{
     font-size: 5rem;
@@ -25,26 +26,28 @@ nav{
 }
 nav ul li{
     display: inline-block;
-    line-height: 70px;
-    margin: 0 300px 10px 300px;
+    line-height: 2;
     background-color: salmon;
     border-radius: 10px;
 }
 nav ul li a {
-    display: inline-block;
+    display: flex;
     color: #fff;
     font-size: 1.2rem;
     padding: 7px 10px;
-    border-radius: 10px;
     text-transform: uppercase;
     text-decoration: none;
+    
+}
+#dp-allProjects a {
+    border-top: 1px solid #fff;
 }
 a:active, a:hover {
     background-color: salmon;
     transition: -5%;
 }
 .dp-contact{
-    line-height: 50px;
+    line-height: 2;
 }
 @media (max-width: 900px) {
     nav ul li {
@@ -56,9 +59,6 @@ a:active, a:hover {
     }
     #dp-text {
         font-size: 1rem;
-    }
-    .dropdown:hover .dropdown-child {
-        margin: 0 auto;
     }
 }
  
@@ -77,7 +77,7 @@ a:active, a:hover {
 .dropdown:hover .dropdown-child {
     display: inline;
     position: absolute;
-    margin: 70px -30px;
+    margin: 70px 0;
     background-color: #66b2b2;
     transition: -5%;
     border-radius: 10px;
@@ -100,6 +100,29 @@ a:active, a:hover {
 textarea {
     height: 200px;
     width: 200px;
+    padding: 5px;
+}
+@media (max-width: 400px) {
+    .dropdown {
+        display: flex;
+    }
+    .dropdown:hover #dp-contact {
+        margin: 40px 0;
+    }
+    .logo {
+        font-size: 3rem;
+        padding-top: 55px;
+    }
+    nav ul li a, #dp-text {
+        font-size: 0.75rem;
+        line-height: 1.5;
+    }
+    #dp-i, textarea {
+        width: 150px;
+    }
+    #dp-i {
+        height: 30px;
+    }
 }
 
 /*********************************** ALL HEADINGS */
@@ -115,6 +138,11 @@ h1 {
     h1 {
         font-size: 2rem;
         padding: 10% 0;
+    }
+}
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1rem;
     }
 }
 
@@ -146,6 +174,9 @@ input::-webkit-inner-spin-button {
     #main-section {
         margin: 0 5%;
     }
+    label {
+        font-size: 1rem;
+    }
 }
 
 /*********************************** ALL BUTTONS */
@@ -158,6 +189,14 @@ input::-webkit-inner-spin-button {
     color: #fff;
     box-shadow: 2px 2px 1px 1px teal;
     margin: 10px;
+}
+
+@media (max-width: 400px) {
+    .button {
+        height: 35px;
+        width: 100px;
+        font-size: 0.75rem;
+    }
 }
 
 /*********************************** AGE CHECK SECTION */
@@ -201,6 +240,11 @@ input::-webkit-inner-spin-button {
 #msg p {
     color: salmon;
 }
+@media (max-width: 800px) {
+    #image {
+        width: 180px;
+    }
+}
 
 /*********************************** LET'S COUNT SECTION */
 .data {
@@ -228,8 +272,9 @@ input::-webkit-inner-spin-button {
 /*********************************** MULTIPLICATION TABLE SECTION */
 #select {
     min-height: 400px;
-    max-width: 400px;
-    margin: 120px 0;
+    width: 80%;
+    height: 500px;
+    margin: 10% 0;
     font-size: 1.6rem;
     text-align: center;
 }
@@ -253,13 +298,12 @@ input::-webkit-inner-spin-button {
     margin: 20px;
 }
 #list-tab {
-    max-width: 400px;
+    width: 80%;
+    height: 200px;
+    margin: 5% 0;
 }
 
 /*********************************** DICE GAME SECTION */
-#dice-game {
-    margin-bottom: 80px;
-}
 #dice-game div{
     padding-top: 60px;
 }
@@ -270,6 +314,12 @@ input::-webkit-inner-spin-button {
 #dice-game h5 {
     font-size: 0.75rem;
 }
+@media (max-width: 400px) {
+    #dice-game div img {
+        width: 150px;
+    }
+}
+
 /*********************************** FOOTER */
 footer {
     background-color:#66b2b2;
@@ -280,4 +330,9 @@ footer {
     position: fixed;
     bottom: 0;
 
+}
+@media (max-width: 400px) {
+    footer {
+        font-size: 0.75rem;
+    }
 }

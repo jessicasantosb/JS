@@ -60,8 +60,6 @@ function loading() {
     let m = d.getMinutes()
     msg.innerHTML = 'Now is ' + h + ' hours<br> and ' + m + ' minutes'
     img.style.textAlign = 'center'
-    img.style.maxHeight = '300px'
-    img.style.minHeight = '150px'
     img.style.padding = '20% 0'
     msg.style.color = 'salmon'
     msg.style.fontWeight = 'bold'
@@ -211,4 +209,5 @@ if (randomNumber1 >= randomNumber2) {
     text.innerHTML = 'Draw'
 }
 
-
+///////////////// SETUP LANGUAGE ///////////////
+window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"languages":["en","pt","fr","de","it","es"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","switcher_vertical_position":"top","float_switcher_open_direction":"bottom","flag_style":"3d","alt_flags":{"pt":"brazil"}}
