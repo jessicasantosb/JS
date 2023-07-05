@@ -82,6 +82,9 @@ a:active, a:hover {
     transition: -5%;
     border-radius: 10px;
 }
+.dropdown:hover #dp-contact {
+    margin: 70px -70px;
+}
 
 /* CONTACT BUTTOM */
 #dp-text {
@@ -107,7 +110,7 @@ textarea {
         display: flex;
     }
     .dropdown:hover #dp-contact {
-        margin: 40px 0;
+        margin: 40px -10px;
     }
     .logo {
         font-size: 3rem;
@@ -301,23 +304,6 @@ input::-webkit-inner-spin-button {
     width: 80%;
     height: 200px;
     margin: 5% 0;
-}
-
-/*********************************** DICE GAME SECTION */
-#dice-game div{
-    padding-top: 60px;
-}
-#dice-game div p {
-    font-size: 1.5rem;
-    padding: 10px;
-}
-#dice-game h5 {
-    font-size: 0.75rem;
-}
-@media (max-width: 400px) {
-    #dice-game div img {
-        width: 150px;
-    }
 }
 
 /*********************************** FOOTER */

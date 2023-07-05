@@ -191,23 +191,5 @@ function end() {
     }
 }
 
-/////////////////// DICE GAME /////////////////
-const randomNumber1 = Math.floor(Math.random() * 5)+1;
-const randomNumber2 = Math.floor(Math.random() * 5)+1; 
-const img1 = document.querySelector('img.img1').setAttribute('src', 'images/dice'+randomNumber1+'.png')
-const img2 = document.querySelector('img.img2').setAttribute('src', 'images/dice'+randomNumber2+'.png')
-const btn = document.querySelector('#btn-dice')
-let text = document.querySelector('h2.dice-text')
-text.style.color = 'salmon'
-text.style.fontWeight = 'bold'
-
-if (randomNumber1 >= randomNumber2) {
-    text.innerHTML = 'Player 1 Wins!'
-} else if (randomNumber1 <= randomNumber2) {
-    text.innerHTML = 'Player 2 Wins!'
-} else {
-    text.innerHTML = 'Draw'
-}
-
 ///////////////// SETUP LANGUAGE ///////////////
 window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"languages":["en","pt","fr","de","it","es"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","switcher_vertical_position":"top","float_switcher_open_direction":"bottom","flag_style":"3d","alt_flags":{"pt":"brazil"}}
